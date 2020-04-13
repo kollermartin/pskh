@@ -1,0 +1,44 @@
+.header {
+    background-color: #262626;
+    grid-column: full-start / full-end;
+    
+    display: grid;
+    grid-template-columns:minmax(5rem,1fr) [center-start] repeat(8, minmax(min-content,18rem)) [center-end] minmax(5rem,1fr);
+    &__nav {
+        grid-column: center-start / center-end;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+
+        & > * {
+            align-self: stretch;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 1rem;
+            transition: .2s;
+        }
+        
+        &>*:hover {
+            background-color: #3F3F3F;
+        }
+
+        &-link:link,
+        &-link:visited {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.8rem;
+            padding: 2rem;
+        }
+        .flag {
+            height: 100%;
+            display: block;
+            margin-right: -1rem; 
+        }
+    }
+
+    
+
+    
+}

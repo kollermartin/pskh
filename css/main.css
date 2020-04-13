@@ -1,0 +1,100 @@
+.header {
+  background-color: #262626;
+  grid-column: full-start / full-end;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(5rem, 1fr) [center-start] (minmax(min-content, 18rem))[8] [center-end] minmax(5rem, 1fr);
+      grid-template-columns: minmax(5rem, 1fr) [center-start] repeat(8, minmax(-webkit-min-content, 18rem)) [center-end] minmax(5rem, 1fr);
+      grid-template-columns: minmax(5rem, 1fr) [center-start] repeat(8, minmax(min-content, 18rem)) [center-end] minmax(5rem, 1fr);
+}
+
+.header__nav {
+  grid-column: center-start / center-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__nav > * {
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 1rem;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.header__nav > *:hover {
+  background-color: #3F3F3F;
+}
+
+.header__nav-link:link, .header__nav-link:visited {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.8rem;
+  padding: 2rem;
+}
+
+.header__nav .flag {
+  height: 100%;
+  display: block;
+  margin-right: -1rem;
+}
+
+.footer {
+  background-color: pink;
+  grid-column: full-start / full-end;
+}
+
+.content {
+  background-color: yellow;
+  min-height: 100vh;
+  grid-column: center-start  / center-end;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-weight: 300;
+  font-family: sans-serif;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 6rem min-content 6rem;
+      grid-template-rows: 6rem -webkit-min-content 6rem;
+      grid-template-rows: 6rem min-content 6rem;
+  -ms-grid-columns: [full-start] minmax(5rem, 1fr) [center-start] (minmax(min-content, 18rem))[8] [center-end] minmax(5rem, 1fr) [full-end];
+      grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(8, minmax(-webkit-min-content, 18rem)) [center-end] minmax(5rem, 1fr) [full-end];
+      grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(8, minmax(min-content, 18rem)) [center-end] minmax(5rem, 1fr) [full-end];
+}
+/*# sourceMappingURL=main.css.map */
