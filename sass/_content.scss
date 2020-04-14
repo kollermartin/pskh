@@ -1,5 +1,56 @@
 .content {
-    background-color: yellow;
-    min-height: 100vh;
+    
+    
     grid-column: center-start  / center-end ;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem,1fr));
+    grid-column-gap: 5rem;
+    grid-row-gap: 4rem;
+    padding: 5rem 0;
+}
+
+.card {
+    background-color: #555555;
+    
+    position: relative;
+    text-decoration: none;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content min-content;
+    box-shadow: .5rem 1rem 2rem rgba(#000, .3);
+    
+    transition: all .3s;
+    
+    
+    &__img {
+        
+        height: 100%;
+        width: 100%;
+        display: block;
+        
+    }
+
+    .btn-span {
+       
+        color: #fff;
+        display: block;
+        border: none;
+        text-decoration: none;
+        background-color: #555555;
+        padding: 1rem 1.5rem;
+        align-self: center;
+        justify-self: stretch;
+        text-align: center;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+    }
+
+    &:hover {
+        transform: scale(1.08);
+        box-shadow: 1rem 1rem 3rem rgba(#000, .8);
+    }
+
+    
 }
