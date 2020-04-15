@@ -56,7 +56,7 @@
 }
 
 .footer {
-  background-color: pink;
+  background-color: #262626;
   grid-column: full-start / full-end;
 }
 
@@ -72,7 +72,7 @@
 }
 
 .card {
-  background-color: #555555;
+  background-color: #262626;
   position: relative;
   text-decoration: none;
   display: -ms-grid;
@@ -99,7 +99,7 @@
   display: block;
   border: none;
   text-decoration: none;
-  background-color: #555555;
+  background-color: #262626;
   padding: 1rem 1.5rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -137,7 +137,6 @@ body {
   color: #fff;
   font-weight: 300;
   font-family: sans-serif;
-  background-color: #ebebeb;
 }
 
 .container {
@@ -149,5 +148,170 @@ body {
   -ms-grid-columns: [full-start] minmax(5rem, 1fr) [center-start] (minmax(min-content, 18rem))[8] [center-end] minmax(5rem, 1fr) [full-end];
       grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(8, minmax(-webkit-min-content, 18rem)) [center-end] minmax(5rem, 1fr) [full-end];
       grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(8, minmax(min-content, 18rem)) [center-end] minmax(5rem, 1fr) [full-end];
+}
+
+.rating {
+  grid-column: center-start / center-end;
+  background-color: #ebebeb;
+  color: #262626;
+  padding: 3rem;
+  min-height: 100vh;
+}
+
+.rating__head-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.rating__head-box-line {
+  display: block;
+  height: 2px;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #c0b8b5;
+  margin: 3rem auto;
+}
+
+.rating__heading {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 80%;
+          flex: 0 80%;
+  display: block;
+  text-align: center;
+}
+
+.rating__heading > * {
+  font-size: 3.2rem;
+  font-weight: 300;
+}
+
+.rating__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.rating__img img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+.rating__rate-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.7);
+          box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.7);
+}
+
+.rating__label-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0;
+          flex: 1 0;
+  background-color: #525252;
+  color: #fff;
+}
+
+.rating__label {
+  font-size: 2rem;
+}
+
+.rating__label--heading {
+  font-size: 3rem;
+  display: block;
+  font-weight: 500;
+}
+
+.rating__label--heading::after {
+  content: "";
+  display: block;
+  width: 30%;
+  height: 2px;
+  background-color: #fff;
+  margin-top: 1.4rem;
+}
+
+.rating__label--text::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #6b6b6b;
+  margin-top: 2rem;
+}
+
+.rating__setup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.rating__textbox {
+  margin-right: auto;
+}
+
+.rating textarea {
+  resize: none;
+  -webkit-transition: all .05s;
+  transition: all .05s;
+}
+
+.rating textarea:focus {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: grey;
+}
+
+.rating__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.rating__section--heading {
+  display: block;
+  text-align: center;
+  font-size: 2.7rem;
+  padding: 2rem 0;
+}
+
+.rating__commands {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.rating .br-widget {
+  background-color: #858383 !important;
+}
+
+.rating .br-widget > * {
+  display: inline-block;
+  margin-top: .5rem;
 }
 /*# sourceMappingURL=main.css.map */

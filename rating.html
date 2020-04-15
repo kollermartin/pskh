@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="js/themes/fontawesome-stars-o.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header__nav">
+               
+                <div class="header__nav-label">
+                    <a href="index.html" class="header__nav-link">Produkty a služby</a>
+                </div>
+            
+                <div class="header__nav-language">
+                <a href="#">
+                    <img src="img/czFlag.png" alt="Czech Flag" class="flag">
+                    <a href="#" class="header__nav-link">Čeština</a>
+                </a>
+                </div>
+            </div>
+        </header>
+        <section class="rating">
+            <div class="rating__head-box">
+                <div class="rating__heading">
+                   <h2>Chrám sv. Barbory, Vlašský dvůr, historické jádro města, Kostnice, Katedrála Nanebevzetí Panny Marie a sv. Jana Křtitele </h2> 
+                </div>
+                <!-- <div class="rating__stars-head">
+                    <select id="displayStarRating">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div> -->
+                
+            </div>
+            <div class="rating__head-box-line"></div>
+            
+            <div class="rating__rate-box">
+                <div class="rating__img">
+                    <img src="img/mrdka.jpg" alt="" srcset="">
+                </div>
+                <div class="rating__label-box">
+                    <div class="rating__label">
+                        <h4 class="rating__label--heading">Informace</h4><br>
+                        <p class="rating__label--text">
+                            Pro podrobnější prohlídku Kutné Hory volíte časově náročnější okruh. Navštívíte obě kutnohorské katedrály, královskou mincovnu i Hřbitovní kostel Všech svatých se světoznámou Kostnicí.
+                        </p>
+                        
+                    </div>
+                    <div class="rating__section">
+                        <span class="rating__section--heading">
+                            Zanechte hodnocení
+                        </span>
+                        <div class="rating__commands">
+                            <div class="rating__textbox">
+                                <textarea class="textarea" name="" id="" cols="50" rows="10"></textarea>
+                            </div>
+                            <div class="rating__setup">
+                                <div class="rating__stars">
+                                    <select id="newStarRating">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select> 
+                                </div>
+                                 
+                                    <button>Přidat hodnocení</button>
+                                </div>
+                        </div>
+                        
+                        
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="rating__head-box-line"></div>
+        </section>
+
+        <footer class="footer">
+            sss
+        </footer>
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.barrating.min.js"></script>
+    <script>
+        $(function() {
+            $('#displayStarRating').barrating({
+            theme: 'fontawesome-stars-o',
+            initialRating: 5,
+            readonly: true
+            });
+            $('#newStarRating').barrating({
+            theme: 'fontawesome-stars-o',
+            initialRating: 1
+            });
+
+            
+        });
+    </script>
+</body>
+</html>
