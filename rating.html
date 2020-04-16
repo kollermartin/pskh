@@ -30,22 +30,15 @@
                 <div class="rating__heading">
                    <h2>Chrám sv. Barbory, Vlašský dvůr, historické jádro města, Kostnice, Katedrála Nanebevzetí Panny Marie a sv. Jana Křtitele </h2> 
                 </div>
-                <!-- <div class="rating__stars-head">
-                    <select id="displayStarRating">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </div> -->
-                
             </div>
             <div class="rating__head-box-line"></div>
             
             <div class="rating__rate-box">
                 <div class="rating__img">
-                    <img src="img/mrdka.jpg" alt="" srcset="">
+                    <figure>
+                        <img src="img/mrdka.jpg" alt="" srcset="">
+                    </figure>
+                    
                 </div>
                 <div class="rating__label-box">
                     <div class="rating__label">
@@ -55,13 +48,16 @@
                         </p>
                         
                     </div>
+                    <form action="">
+
+                    
                     <div class="rating__section">
                         <span class="rating__section--heading">
                             Zanechte hodnocení
                         </span>
                         <div class="rating__commands">
                             <div class="rating__textbox">
-                                <textarea class="textarea" name="" id="" cols="50" rows="10"></textarea>
+                                <textarea class="textarea" name="" id="" rows="8" contenteditable="true"></textarea>
                             </div>
                             <div class="rating__setup">
                                 <div class="rating__stars">
@@ -74,16 +70,19 @@
                                     </select> 
                                 </div>
                                  
-                                    <button>Přidat hodnocení</button>
-                                </div>
+                                    <button class="rating__btn">Přidat hodnocení</button>
+                            </div>
                         </div>
                         
                         
-                    </div>
-                   
+                        </div>
+                    </form>
                 </div>
             </div>
             <div class="rating__head-box-line"></div>
+            <div class="rated">
+                <h1>Hodnocení</h1>
+            </div>
         </section>
 
         <footer class="footer">
