@@ -58,6 +58,17 @@
 .footer {
   background-color: #262626;
   grid-column: full-start / full-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 .content {
@@ -142,9 +153,9 @@ body {
 .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 6rem min-content 6rem;
-      grid-template-rows: 6rem -webkit-min-content 6rem;
-      grid-template-rows: 6rem min-content 6rem;
+  -ms-grid-rows: 6rem min-content 7rem;
+      grid-template-rows: 6rem -webkit-min-content 7rem;
+      grid-template-rows: 6rem min-content 7rem;
   -ms-grid-columns: [full-start] minmax(5rem, 1fr) [center-start] (minmax(min-content, 18rem))[8] [center-end] minmax(5rem, 1fr) [full-end];
       grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(8, minmax(-webkit-min-content, 18rem)) [center-end] minmax(5rem, 1fr) [full-end];
       grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(8, minmax(min-content, 18rem)) [center-end] minmax(5rem, 1fr) [full-end];
@@ -196,6 +207,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: #525252;
 }
 
 .rating__img img {
