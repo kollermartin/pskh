@@ -20,6 +20,6 @@ body {
 
 .container {
     display: grid;
-    grid-template-rows: 6rem min-content 6rem;
+    grid-template-rows: 6rem min-content 7rem;
     grid-template-columns:[full-start] minmax(5rem,1fr) [center-start] repeat(8,minmax(min-content,18rem)) [center-end] minmax(5rem,1fr) [full-end];
 }
