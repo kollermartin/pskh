@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="js/themes/fontawesome-stars.css">
     <link rel="stylesheet" href="js/themes/fontawesome-stars-o.css">
+    
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
@@ -80,31 +82,55 @@
                 </div>
             </div>
             <div class="rating__head-box-line"></div>
-            <div class="rated">
-                <h1>Hodnocení</h1>
+            <div class="ratings">
+                <div class="ratings__heading m-b-bg">
+                    <h1>Hodnocení</h1>
+                </div>
+                <div class="ratings__review-box">
+                    <div class="ratings__review-post">
+                        <div class="starsUser">
+                            <div class="starsUser__name">
+                                Kokotko
+                            </div>
+                            <div class="startUser__stars"> <select id="userStarRating">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select> </div>
+                        </div>
+                        <div class="opinion">
+                            Výlet byl velice dobrá fajnovka, Dobře jsem se zhulil
+                        </div>
+                    </div>
+                </div>
             </div>
+            
         </section>
 
         <footer class="footer">
-            Provozovatelem stránek je <b>Průvodcovská služba Kutná Hora, příspěvková organizace</b>. <br>
-            2020 © Všechna práva vyhrazena.
+
+           <p class="m-b-sm"> Provozovatelem stránek je <span class="bold">Průvodcovská služba Kutná Hora, příspěvková organizace</span>.</p>
+           2020 © Všechna práva vyhrazena.
+            
         </footer>
     </div>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/jquery.barrating.min.js"></script>
     <script>
         $(function() {
-            $('#displayStarRating').barrating({
-            theme: 'fontawesome-stars-o',
-            initialRating: 5,
-            readonly: true
-            });
             $('#newStarRating').barrating({
             theme: 'fontawesome-stars-o',
             initialRating: 1
             });
 
-            
+            $('#userStarRating').barrating({
+            theme: 'fontawesome-stars',
+            initialRating: 1,
+            readonly: true,
+            });
+
         });
     </script>
 </body>
