@@ -4,6 +4,9 @@
     
     display: grid;
     grid-template-columns:minmax(5rem,1fr) [center-start] repeat(8, minmax(min-content,18rem)) [center-end] minmax(5rem,1fr);
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns:[full-start] minmax(min-content,1fr) [center-start] repeat(8,minmax(min-content,18rem)) [center-end] minmax(min-content,1fr) [full-end];
+    }
     &__nav {
         grid-column: center-start / center-end;
         display: flex;

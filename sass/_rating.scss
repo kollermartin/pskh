@@ -4,11 +4,29 @@
     color: #262626;
     padding: 3rem;
     min-height: 100vh;
+    @media only screen and (max-width: $bp-xlarge) {
+        padding: 2rem;
+    }
+    @media only screen and (max-width: $bp-medium) {
+        padding: 1rem;
+    }
+
 
     &__head-box {
         display: flex;
         align-items: center;
         justify-content: center;
+        @media only screen and (max-width: $bp-xlarge) {
+            display: block;
+            font-size: 3rem;
+        }
+        
+        @media only screen and (max-width: $bp-medium) {
+            display: block;
+            h2 {
+                font-size: 3rem;
+            }
+        }
     }
 
     &__head-box-line {
@@ -19,6 +37,7 @@
         // background-color: rgb(170, 170, 170);
         background-color: rgb(192, 184, 181);
         margin: 3rem auto;
+        
     }
 
     &__heading {
@@ -47,6 +66,24 @@
     &__rate-box {
         display: flex;
         box-shadow: .5rem .5rem 2rem rgba(#000, .7);
+        @media only screen and (max-width: $bp-1300) {
+            flex-direction: column;
+            align-items: center;
+            background-color: #525252;
+            width: 55%;
+            margin: 0 auto;
+        }
+        @media only screen and (max-width: $bp-1050) {
+            width: 65%;
+        }
+        @media only screen and (max-width: $bp-medium) {
+            width: 75%;
+        }
+        @media only screen and (max-width: $bp-small) {
+            width: 100%;
+        }
+        
+        
     }
     &__label-box {
         display: flex;
@@ -56,6 +93,9 @@
         flex: 1 0;
         background-color: #525252;
         color: #fff;
+        @media only screen and (max-width: $bp-1050) {
+           padding: 1rem;
+        }
     }
     &__label {
         font-size: 2rem;
@@ -105,6 +145,10 @@
     &__textbox {
         height: 60%;
         width: 60%;
+        @media only screen and (max-width: $bp-small) {
+            margin: 0 auto;
+            width: 80%;
+        }
     }
     textarea:focus {
         outline-width: 2px;
@@ -136,10 +180,17 @@
     
     &__commands {
         display: flex;
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__stars {
-        
+        @media only screen and (max-width: $bp-small) {
+            margin: 1.5rem;
+            
+        }
     }
 
     &__btn {
@@ -151,7 +202,10 @@
         box-shadow: 0rem .5rem 1rem rgba(#000, .5);
         cursor: pointer;
         transition: all .2s;
-
+        @media only screen and (max-width: $bp-small) {
+            margin: 1.5rem;
+            
+        }
         &:focus {
             outline: none;
         }
@@ -179,12 +233,21 @@
         // border: 1px solid rgb(192, 184, 181);
         background-color: #fff;
         box-shadow: .5rem .5rem 3rem rgba(#000, .2);
+        @media only screen and (max-width: $bp-small) {
+         width: 100%; 
+         margin: none;
+         padding: 0;      
+                
+        }
     }
 
     &__review-post {
         display: grid;
         grid-template-columns: 20% 1fr;
-        
+        @media only screen and (max-width: $bp-small) {
+            display: flex;
+            border-bottom: 1px solid rgb(190, 190, 190);
+        }
 
         .starsUser {
             text-align: center;
@@ -193,6 +256,11 @@
             padding: 2rem 0;
             
             border-bottom: 1px solid rgb(190, 190, 190);
+            @media only screen and (max-width: $bp-small) {
+                border-bottom: none;
+                font-size: 2rem;
+                padding: 1rem;
+            }
         }
 
         .opinion {
@@ -200,6 +268,10 @@
             font-size:1.8rem;
             border-bottom: 1px solid rgb(190, 190, 190);
             text-align: left;
+            @media only screen and (max-width: $bp-small) {
+                
+                border-bottom: none;
+            }
         }
     }
 }

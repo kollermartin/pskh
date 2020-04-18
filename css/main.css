@@ -1,3 +1,73 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media only screen and (max-width: 84.375em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+@media only screen and (max-width: 81.25em) {
+  html {
+    font-size: 57%;
+  }
+}
+
+@media only screen and (max-width: 65.625em) {
+  html {
+    font-size: 56%;
+  }
+}
+
+@media only screen and (max-width: 53.125em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media only screen and (max-width: 40.625em) {
+  html {
+    font-size: 53%;
+  }
+}
+
+body {
+  color: #fff;
+  font-weight: 300;
+  font-family: sans-serif;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 6rem min-content 7rem;
+      grid-template-rows: 6rem -webkit-min-content 7rem;
+      grid-template-rows: 6rem min-content 7rem;
+  -ms-grid-columns: [full-start] minmax(5rem, 1fr) [center-start] (minmax(min-content, 18rem))[8] [center-end] minmax(5rem, 1fr) [full-end];
+      grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(8, minmax(-webkit-min-content, 18rem)) [center-end] minmax(5rem, 1fr) [full-end];
+      grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(8, minmax(min-content, 18rem)) [center-end] minmax(5rem, 1fr) [full-end];
+}
+
+@media only screen and (max-width: 53.125em) {
+  .container {
+    -ms-grid-columns: [full-start] minmax(min-content, 1fr) [center-start] (minmax(min-content, 18rem))[8] [center-end] minmax(min-content, 1fr) [full-end];
+        grid-template-columns: [full-start] minmax(-webkit-min-content, 1fr) [center-start] repeat(8, minmax(-webkit-min-content, 18rem)) [center-end] minmax(-webkit-min-content, 1fr) [full-end];
+        grid-template-columns: [full-start] minmax(min-content, 1fr) [center-start] repeat(8, minmax(min-content, 18rem)) [center-end] minmax(min-content, 1fr) [full-end];
+  }
+}
+
 .header {
   background-color: #262626;
   grid-column: full-start / full-end;
@@ -6,6 +76,14 @@
   -ms-grid-columns: minmax(5rem, 1fr) [center-start] (minmax(min-content, 18rem))[8] [center-end] minmax(5rem, 1fr);
       grid-template-columns: minmax(5rem, 1fr) [center-start] repeat(8, minmax(-webkit-min-content, 18rem)) [center-end] minmax(5rem, 1fr);
       grid-template-columns: minmax(5rem, 1fr) [center-start] repeat(8, minmax(min-content, 18rem)) [center-end] minmax(5rem, 1fr);
+}
+
+@media only screen and (max-width: 53.125em) {
+  .header {
+    -ms-grid-columns: [full-start] minmax(min-content, 1fr) [center-start] (minmax(min-content, 18rem))[8] [center-end] minmax(min-content, 1fr) [full-end];
+        grid-template-columns: [full-start] minmax(-webkit-min-content, 1fr) [center-start] repeat(8, minmax(-webkit-min-content, 18rem)) [center-end] minmax(-webkit-min-content, 1fr) [full-end];
+        grid-template-columns: [full-start] minmax(min-content, 1fr) [center-start] repeat(8, minmax(min-content, 18rem)) [center-end] minmax(min-content, 1fr) [full-end];
+  }
 }
 
 .header__nav {
@@ -86,6 +164,13 @@
   padding: 5rem 0;
 }
 
+@media only screen and (max-width: 53.125em) {
+  .content {
+    padding: 2rem 1rem;
+    grid-gap: 2rem;
+  }
+}
+
 .card {
   background-color: #262626;
   position: relative;
@@ -101,6 +186,13 @@
           box-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.3);
   -webkit-transition: all .3s;
   transition: all .3s;
+}
+
+@media only screen and (max-width: 53.125em) {
+  .card {
+    -webkit-transition: none;
+    transition: none;
+  }
 }
 
 .card__img {
@@ -133,36 +225,13 @@
           box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.8);
 }
 
-*,
-*::after,
-*::before {
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-
-html {
-  font-size: 62.5%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  color: #fff;
-  font-weight: 300;
-  font-family: sans-serif;
-}
-
-.container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 6rem min-content 7rem;
-      grid-template-rows: 6rem -webkit-min-content 7rem;
-      grid-template-rows: 6rem min-content 7rem;
-  -ms-grid-columns: [full-start] minmax(5rem, 1fr) [center-start] (minmax(min-content, 18rem))[8] [center-end] minmax(5rem, 1fr) [full-end];
-      grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(8, minmax(-webkit-min-content, 18rem)) [center-end] minmax(5rem, 1fr) [full-end];
-      grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(8, minmax(min-content, 18rem)) [center-end] minmax(5rem, 1fr) [full-end];
+@media only screen and (max-width: 53.125em) {
+  .card:hover {
+    -webkit-transform: none;
+            transform: none;
+    -webkit-box-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.3);
+            box-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.3);
+  }
 }
 
 .bold {
@@ -185,6 +254,18 @@ body {
   min-height: 100vh;
 }
 
+@media only screen and (max-width: 84.375em) {
+  .rating {
+    padding: 2rem;
+  }
+}
+
+@media only screen and (max-width: 53.125em) {
+  .rating {
+    padding: 1rem;
+  }
+}
+
 .rating__head-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -195,6 +276,22 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media only screen and (max-width: 84.375em) {
+  .rating__head-box {
+    display: block;
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 53.125em) {
+  .rating__head-box {
+    display: block;
+  }
+  .rating__head-box h2 {
+    font-size: 3rem;
+  }
 }
 
 .rating__head-box-line {
@@ -240,6 +337,39 @@ body {
           box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.7);
 }
 
+@media only screen and (max-width: 81.25em) {
+  .rating__rate-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #525252;
+    width: 55%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 65.625em) {
+  .rating__rate-box {
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 53.125em) {
+  .rating__rate-box {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 40.625em) {
+  .rating__rate-box {
+    width: 100%;
+  }
+}
+
 .rating__label-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -254,6 +384,12 @@ body {
           flex: 1 0;
   background-color: #525252;
   color: #fff;
+}
+
+@media only screen and (max-width: 65.625em) {
+  .rating__label-box {
+    padding: 1rem;
+  }
 }
 
 .rating__label {
@@ -315,6 +451,13 @@ body {
   width: 60%;
 }
 
+@media only screen and (max-width: 40.625em) {
+  .rating__textbox {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+
 .rating textarea:focus {
   outline-width: 2px;
   outline-style: solid;
@@ -353,6 +496,24 @@ body {
   display: flex;
 }
 
+@media only screen and (max-width: 40.625em) {
+  .rating__commands {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (max-width: 40.625em) {
+  .rating__stars {
+    margin: 1.5rem;
+  }
+}
+
 .rating__btn {
   border: 2px solid #fff;
   color: #fff;
@@ -364,6 +525,12 @@ body {
   cursor: pointer;
   -webkit-transition: all .2s;
   transition: all .2s;
+}
+
+@media only screen and (max-width: 40.625em) {
+  .rating__btn {
+    margin: 1.5rem;
+  }
 }
 
 .rating__btn:focus {
@@ -390,11 +557,28 @@ body {
           box-shadow: 0.5rem 0.5rem 3rem rgba(0, 0, 0, 0.2);
 }
 
+@media only screen and (max-width: 40.625em) {
+  .ratings__review-box {
+    width: 100%;
+    margin: none;
+    padding: 0;
+  }
+}
+
 .ratings__review-post {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 20% 1fr;
       grid-template-columns: 20% 1fr;
+}
+
+@media only screen and (max-width: 40.625em) {
+  .ratings__review-post {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: 1px solid #bebebe;
+  }
 }
 
 .ratings__review-post .starsUser {
@@ -405,10 +589,24 @@ body {
   border-bottom: 1px solid #bebebe;
 }
 
+@media only screen and (max-width: 40.625em) {
+  .ratings__review-post .starsUser {
+    border-bottom: none;
+    font-size: 2rem;
+    padding: 1rem;
+  }
+}
+
 .ratings__review-post .opinion {
   padding: 2rem 1rem;
   font-size: 1.8rem;
   border-bottom: 1px solid #bebebe;
   text-align: left;
+}
+
+@media only screen and (max-width: 40.625em) {
+  .ratings__review-post .opinion {
+    border-bottom: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */
