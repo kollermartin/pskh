@@ -48,6 +48,7 @@
         
         flex: 0 80%;
         text-align: center;
+        
 
         & > * {
             font-size: 3.2rem;
@@ -255,7 +256,29 @@
         font-size: 3rem;
         font-weight: 400;
         text-align: center;
-        
+        display: flex;
+        justify-content: center;
+        @media only screen and (max-width: $bp-400) {
+            display: block;
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__stars {
+        margin-left: 1rem;
+        margin-top: 2.5px;
+
+        @media only screen and (max-width: $bp-1050) {
+           margin-top: 6.5px;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            margin-top: 6.5px;
+        }
+
+        @media only screen and (max-width: $bp-400) {
+            margin: 0;
+        }
     }
 
     &__review-box {

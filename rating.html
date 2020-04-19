@@ -85,6 +85,15 @@
             <div class="ratings">
                 <div class="ratings__heading m-b-bg">
                     <h1>Hodnocení</h1>
+                    <div class="ratings__stars">
+                        <select id="overallStarRating">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select> 
+                    </div>
                 </div>
                 <div class="ratings__review-box">
                     <div class="ratings__review-post">
@@ -125,11 +134,19 @@
             initialRating: 1
             });
 
+            $('#overallStarRating').barrating({
+            theme: 'fontawesome-stars-o',
+            initialRating: 1,
+            readonly: true,
+            });
+
             $('#userStarRating').barrating({
             theme: 'fontawesome-stars',
             initialRating: 1,
             readonly: true,
             });
+
+
 
         });
     </script>

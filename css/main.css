@@ -608,6 +608,42 @@ body {
   font-size: 3rem;
   font-weight: 400;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media only screen and (max-width: 25em) {
+  .ratings__heading {
+    display: block;
+    margin-bottom: 3rem;
+  }
+}
+
+.ratings__stars {
+  margin-left: 1rem;
+  margin-top: 2.5px;
+}
+
+@media only screen and (max-width: 65.625em) {
+  .ratings__stars {
+    margin-top: 6.5px;
+  }
+}
+
+@media only screen and (max-width: 40.625em) {
+  .ratings__stars {
+    margin-top: 6.5px;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  .ratings__stars {
+    margin: 0;
+  }
 }
 
 .ratings__review-box {

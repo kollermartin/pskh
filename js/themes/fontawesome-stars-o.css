@@ -8,11 +8,10 @@
   -webkit-font-smoothing: antialiased;
   text-decoration: none;
   margin-right: 2px;
-  
 }
 .br-theme-fontawesome-stars-o .br-widget a:after {
   content: '\f006';
-  color: #fff;
+  color: rgb(114, 113, 113);
   
 }
 .br-theme-fontawesome-stars-o .br-widget a.br-active:after {
