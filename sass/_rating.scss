@@ -18,14 +18,10 @@
         justify-content: center;
         @media only screen and (max-width: $bp-xlarge) {
             display: block;
-            font-size: 3rem;
         }
         
         @media only screen and (max-width: $bp-medium) {
             display: block;
-            h2 {
-                font-size: 3rem;
-            }
         }
     }
 
@@ -33,10 +29,18 @@
         display: block;
         height: 2px;
         width: 80%;
-        margin: 0 auto;
+        
         // background-color: rgb(170, 170, 170);
         background-color: rgb(192, 184, 181);
         margin: 3rem auto;
+        @media only screen and (max-width: $bp-small) {
+            margin: 2.5rem auto;
+            width: 90%;
+        }
+        @media only screen and (max-width: $bp-400) {
+            margin: 2rem auto;
+            width: 95%;
+        }
         
     }
 
@@ -48,6 +52,20 @@
         & > * {
             font-size: 3.2rem;
             font-weight: 300;
+
+            @media only screen and (max-width: $bp-xlarge) {
+                
+                font-size: 3rem;
+            }
+            @media only screen and (max-width: $bp-medium) {
+                font-size: 2.8rem;
+            }
+            @media only screen and (max-width: $bp-small) {
+                font-size: 2.4rem;
+            }
+            @media only screen and (max-width: $bp-400) {
+                font-size: 2rem;
+            }
             
         }
     }
@@ -80,6 +98,7 @@
         }
         @media only screen and (max-width: $bp-small) {
             width: 100%;
+            box-shadow: 0 0 2rem rgba(#000, .4);
         }
         
         
@@ -109,8 +128,13 @@
             display: block;
             width: 30%;
             height: 2px;
-            background-color: #fff;
-            margin-top: 1.4rem;
+            // background-color: #fff;
+            background-color: rgb(161, 156, 154);
+            margin-top: 0.7rem;
+
+            @media only screen and (max-width: $bp-400) {
+                width: 40%;
+            }
         }
 
         &--text::after {
@@ -170,19 +194,28 @@
             display: block;
             width: 50%;
             height: 2px;
-            background-color: #fff;
+            background-color: rgb(161, 156, 154);
            
-            margin: 1.4rem auto;
+            margin: 0 auto;
+            margin-top: 0.7rem;
+            @media only screen and (max-width: $bp-400) {
+                width: 60%;
+                height: 1px;
+            }
             
         }
     }
     
     &__commands {
         display: flex;
+        @media only screen and (min-width: $bp-1300) {
+            margin-top: 4rem;
+        }
         @media only screen and (max-width: $bp-small) {
             flex-direction: column;
             align-items: center;
         }
+       
     }
 
     &__stars {
@@ -228,6 +261,7 @@
     &__review-box {
         width: 80%;
         margin: 0 auto;
+        margin-bottom: 5rem;
         padding: 1rem;
         // border: 1px solid rgb(192, 184, 181);
         background-color: #fff;

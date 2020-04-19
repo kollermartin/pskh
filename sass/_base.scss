@@ -9,7 +9,8 @@ $bp-xlarge : 84.375em; //1350 / 16
 $bp-1300 : 81.25em; //1300 / 16 
 $bp-1050: 65.625em; //1050 / 16
 $bp-medium : 53.125em; //850 / 16
-$bp-small: 40.625em;
+$bp-small: 40.625em; //650 / 16
+$bp-400: 25em; // 400 / 16
 
 html {
     font-size: 62.5%;
@@ -30,6 +31,9 @@ html {
     }
     @media only screen and (max-width: $bp-small) {
         font-size: 53%;
+    }
+    @media only screen and (max-width: $bp-400) {
+        font-size: 50%;
     }
 }
 
