@@ -126,6 +126,12 @@ body {
   background-color: #3F3F3F;
 }
 
+@media only screen and (max-width: 53.125em) {
+  .header__nav > *:hover, .header__nav .active {
+    background-color: transparent;
+  }
+}
+
 .header__nav-link:link, .header__nav-link:visited {
   text-decoration: none;
   color: #fff;
